@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcxproj", "{CC6FF8B7-E257-42E7-8633-63186E49B33A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7} = {DFEE4151-A6A4-4073-A857-B6C6B08D38C7}
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A} = {CC6FF8B7-E257-42E7-8633-63186E49B33A}
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0} = {D7A60ED2-22A0-458B-8832-090C5BE665A0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleLoggerLib", "ConsoleLoggerLib\ConsoleLoggerLib.vcxproj", "{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleLoggerHelper", "ConsoleLoggerHelper\ConsoleLoggerHelper.vcxproj", "{D7A60ED2-22A0-458B-8832-090C5BE665A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Debug|Win32.Build.0 = Debug|Win32
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Release|Win32.ActiveCfg = Release|Win32
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Release|Win32.Build.0 = Release|Win32
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Template|Win32.ActiveCfg = Release|Win32
+		{CC6FF8B7-E257-42E7-8633-63186E49B33A}.Template|Win32.Build.0 = Release|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Debug|Win32.Build.0 = Debug|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Release|Win32.ActiveCfg = Release|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Release|Win32.Build.0 = Release|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Template|Win32.ActiveCfg = Release|Win32
+		{A08EB9F6-668B-4BD0-9270-5FBBA2662D51}.Template|Win32.Build.0 = Release|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Debug|Win32.Build.0 = Debug|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Release|Win32.ActiveCfg = Release|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Release|Win32.Build.0 = Release|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Template|Win32.ActiveCfg = Release|Win32
+		{DFEE4151-A6A4-4073-A857-B6C6B08D38C7}.Template|Win32.Build.0 = Release|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Debug|Win32.Build.0 = Debug|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Release|Win32.ActiveCfg = Release|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Release|Win32.Build.0 = Release|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Template|Win32.ActiveCfg = Template|Win32
+		{D7A60ED2-22A0-458B-8832-090C5BE665A0}.Template|Win32.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
