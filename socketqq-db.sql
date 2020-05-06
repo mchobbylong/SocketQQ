@@ -16,23 +16,18 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `chatmessage`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `chatmessage`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `chatmessage` (
-  `msgid` int(11) NOT NULL AUTO_INCREMENT,
-  `cid` int(11) NOT NULL,
-  `fromUID` int(11) NOT NULL,
-  `fromName` varchar(200) NOT NULL,
-  `msg` varchar(1100) NOT NULL,
-  `time` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`msgid`),
-  KEY `fromUID` (`fromUID`),
-  KEY `chatmessage_ibfk_1` (`cid`),
-  CONSTRAINT `chatmessage_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `chatroom` (`cid`) ON DELETE CASCADE
+CREATE TABLE `user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `pwd` varchar(300) NOT NULL,
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `unique_key_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -56,22 +51,6 @@ CREATE TABLE `chatroom` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `user`
---
-
-DROP TABLE IF EXISTS `user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `pwd` varchar(300) NOT NULL,
-  PRIMARY KEY (`uid`),
-  UNIQUE KEY `unique_key_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `user_in_chatroom`
 --
 
@@ -87,6 +66,27 @@ CREATE TABLE `user_in_chatroom` (
   CONSTRAINT `user_in_chatroom_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `chatroom` (`cid`) ON DELETE CASCADE,
   CONSTRAINT `user_in_chatroom_ibfk_2` FOREIGN KEY (`uid`) REFERENCES `user` (`uid`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `chatmessage`
+--
+
+DROP TABLE IF EXISTS `chatmessage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `chatmessage` (
+  `msgid` int(11) NOT NULL AUTO_INCREMENT,
+  `cid` int(11) NOT NULL,
+  `fromUID` int(11) NOT NULL,
+  `fromName` varchar(200) NOT NULL,
+  `msg` varchar(1100) NOT NULL,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`msgid`),
+  KEY `fromUID` (`fromUID`),
+  KEY `chatmessage_ibfk_1` (`cid`),
+  CONSTRAINT `chatmessage_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `chatroom` (`cid`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
